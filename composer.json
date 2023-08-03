@@ -1,0 +1,31 @@
+{
+    "name": "davemin/mailup",
+    "description": "Mailup XML http request api integration for laravel 10.x - only subscribe and unsubscribe",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Davemin\\Mailup\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Davide Minardi",
+            "email": "d.minardi@listenagency.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Davemin\\Mailup\\Providers\\ServiceProvider"
+            ],
+            "aliases": {
+                "Mailupper": "Davemin\\Mailup\\Facades\\Mailupper"
+            }
+        }
+    }
+}
